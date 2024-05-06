@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link, Outlet } from "react-router-dom";
 
 const MainLayout : React.FC = (): JSX.Element => {

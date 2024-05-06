@@ -23,7 +23,6 @@ const Home = () => {
         <ProductPage />
       </div>
     </>
-    //footer
   );
 };
 

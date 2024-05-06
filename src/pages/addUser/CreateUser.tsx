@@ -1,20 +1,29 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader.jsx";
 
-interface User  {
-    name: string,
-    email: string,
-    phone: string
+interface User {
+  name: string;
+  email: string;
+  phone: string;
 }
- type StateHookResult<T> = [T | null, React.Dispatch<React.SetStateAction<T | null>>];
 
-  
+export interface Blog {
+  title: string;
+  body: string;
+  author: string;
+  id: number;
+}
+
+type StateHookResult<T> = [
+  T | null,
+  React.Dispatch<React.SetStateAction<T | null>>
+];
 
 const CreateUser = () => {
   const navigate = useNavigate();
-  const createUseApi = "http:''localhost:3000/user";
-  
+  const createUseApi = "http://localhost:5173/UserList";
+
   const [error, setError]: StateHookResult<null> = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState<User>({
@@ -23,7 +32,10 @@ const CreateUser = () => {
     phone: "",
   });
 
-  const handleChange = (event: { preventDefault: () => void; target: { name: any; value: any; }; }) => {
+  const handleChange = (event: {
+    preventDefault: () => void;
+    target: { name: any; value: any };
+  }) => {
     event.preventDefault();
     const { name, value } = event.target;
     setUser({
@@ -34,10 +46,11 @@ const CreateUser = () => {
     console.log(user);
   };
 
-  const handleSubmit = async (event: { preventDefault: () => void; }) => {
+  const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     try {
       setIsLoading(true);
+      console.log(createUseApi);
       const response = await fetch(createUseApi, {
         method: "POST",
         headers: {
@@ -56,7 +69,8 @@ const CreateUser = () => {
         navigate("/show-user");
       }
     } catch (error: any) {
-        setError(error);
+      setIsLoading(false);
+      setError(error.message);
     } finally {
       setIsLoading(false);
     }
@@ -65,8 +79,8 @@ const CreateUser = () => {
   return (
     <div>
       <div className="heading">
+        {error && <p>Error is: {error}</p>}
         {isLoading && <Loader />}
-        {error && <p>Error: {error}</p>}
         <p>User Form</p>
       </div>
       <form onSubmit={handleSubmit}>
