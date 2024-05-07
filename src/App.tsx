@@ -27,9 +27,11 @@ import About from "./pages/About";
 // layouts
 import RootLayout from "./Layouts/RootLayout";
 import HelpLayout from "./Layouts/HelpLayout";
-import Faq from "./pages/Help/faq";
 import Contact from "./pages/Help/Contact";
 import PageNotFound from "./pages/PageNotFound";
+import CareersLayout from "./Layouts/CareersLayout";
+import Careers, { Career, careersLoader } from "./pages/careers/Careers";
+import Faq from "./pages/Help/Faq";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,10 +40,17 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="addblog" element={<AddBlog />} />
       <Route path="help" element={<HelpLayout />}>
-        <Route path="faq" element={<Faq />}/>
-        <Route path="contact" element={<Contact />}/>
+        <Route path="faq" element={<Faq />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
-      <Route path="*"  element={<PageNotFound />} />
+
+      <Route path="careers" element={<CareersLayout />}>
+        <Route index element={<Careers />} 
+        loader={careersLoader}
+        />
+      </Route>
+
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );
