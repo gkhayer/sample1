@@ -1,26 +1,14 @@
 import { useLoaderData, Link, LoaderFunction } from "react-router-dom";
-
-export type Career = {
-  id: number;
-  title: string;
-  salary: number;
-  location: string;
-};
-
-type LoaderData = {
-  data: Career[]
-};
+import { LoaderData } from "../../types/types";
 
 // instead of using useeffect to fetch data from an api use loader
 const Careers = () => {
   const { data } = useLoaderData() as LoaderData;
 
-  console.log(data);
-
   return (
     <div>
       {data?.map((career) => (
-        <Link to="/" key={career.id}>
+        <Link to={career.id.toString()} key={career.id}>
           <p>{career.title}</p>
           <p>Based in {career.location}</p>
         </Link>
@@ -36,7 +24,7 @@ export default Careers;
 export const careersLoader: LoaderFunction = async () => {
   const res = await fetch("http://localhost:8000/careers");
   if (!res.ok) {
-    throw new Error("data not found");
+    throw new Error("Could not fetch the Careers");
   }
   const data = await res.json();
   return { data };

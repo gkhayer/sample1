@@ -1,6 +1,7 @@
 const Contact = () => {
   return (
     <div className="contact">
+
       <div>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
         dolor magnam neque atque nesciunt nisi molestias obcaecati praesentium,

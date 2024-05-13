@@ -141,7 +141,7 @@ form label span {
   margin-right: 10px;
 }
 .breadcrumbs .crumb:after {
-  content: '>';
+  content: '/';
   margin-left: 10px;
 }
 .breadcrumbs .crumb:last-child:after {
