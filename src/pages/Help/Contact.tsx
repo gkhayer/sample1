@@ -1,6 +1,9 @@
+import Calendar from "./Calendar";
+
 const Contact = () => {
   return (
     <div className="contact">
+      <h2>Book an Appointment?</h2>
 
       <div>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
@@ -20,6 +23,8 @@ const Contact = () => {
         </label>
         <button>Submit</button>
       </form>
+
+      <Calendar monthsToShow={12} />
     </div>
   );
 };

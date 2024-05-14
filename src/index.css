@@ -14,7 +14,7 @@ body {
   background: var(--secondary);
 }
 * {
-  color: #fff;
+ color: #fff;
   margin: 0;
 }
 p {
@@ -150,3 +150,16 @@ form label span {
 .breadcrumbs .crumb a {
   color: #ddd;
 }
+
+.sticky-month-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
