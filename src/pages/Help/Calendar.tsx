@@ -78,7 +78,7 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
           style={{
             transform: `scale(${isHovered ? 1.1 : 1})`,
             transition: "transform 0.2s ease-in-out",
-            margin: "1rem",
+            margin: '1rem'
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -104,11 +104,11 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
               <div style={weekdayStyle}>
                 {weekdays.map((weekday, index) => (
                   <div
+                  key={index}
                     style={{
                       color: index === 0 ? "red" : "black",
                       ...gridItem,
                     }}
-                    key={index}
                   >
                     {weekday.slice(0, 1)}
                   </div>

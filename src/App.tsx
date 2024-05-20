@@ -27,7 +27,7 @@ import About from "./pages/About";
 // layouts
 import RootLayout from "./Layouts/RootLayout";
 import HelpLayout from "./Layouts/HelpLayout";
-import Contact from "./pages/Help/Contact";
+import Contact, { contactAction } from "./pages/Help/Contact";
 import PageNotFound from "./pages/PageNotFound";
 import CareersLayout from "./Layouts/CareersLayout";
 import Careers, { careersLoader } from "./pages/careers/Careers";
@@ -46,7 +46,7 @@ const router = createBrowserRouter(
       <Route path="addblog" element={<AddBlog />} />
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} action={contactAction} />
       </Route>
       <Route
         path="careers"

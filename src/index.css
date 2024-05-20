@@ -163,3 +163,9 @@ form label span {
   z-index: 3;
 }
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
