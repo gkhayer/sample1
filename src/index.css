@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
@@ -135,6 +135,7 @@ form label span {
 .breadcrumbs {
   max-width: 1200px;
   margin: 20px auto;
+  text-align: start;
 }
 .breadcrumbs > *{
   display: inline-block;
@@ -149,6 +150,8 @@ form label span {
 }
 .breadcrumbs .crumb a {
   color: #ddd;
+  text-decoration: underline;
+  text-transform: capitalize;
 }
 
 .sticky-month-header {

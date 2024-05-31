@@ -5,6 +5,7 @@ const AddBlog = () => {
   const blogsUrl = "http://localhost:8000/blogs";
   const {data : blogs, isPending, isError} = useFetch(blogsUrl)
 
+
   return (
     <div className="blog"> 
     {isError && <p>Error: {isError}</p>}

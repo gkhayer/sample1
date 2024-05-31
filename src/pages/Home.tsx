@@ -1,18 +1,15 @@
 import "../style/Home.css";
 
-const img =
-  "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80";
+const coverImage = "../../public/cover photo.jpg";
 
 const Home = () => {
   return (
     <>
       <div className="box">
-        <div className="coverdrop">
-          <img className="h-45 w-10 rounded-full " src={img} alt="" />
-        </div>
+        <img className = "coverPhoto" src={coverImage} alt="image description" />
       </div>
 
-      <p className="p-6 m-6">
+      <p className="py-6 m-6">
         At Shonq Tech, we specialize in crafting dynamic websites tailored to
         your needs. From sleek portfolios to robust e-commerce platforms, our
         team ensures your online presence reflects your brand's essence. Beyond
@@ -21,6 +18,7 @@ const Home = () => {
         digital realm. Trust us to not only build your website but also elevate
         your online success with comprehensive SEO solutions.
       </p>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </>
   );
 };

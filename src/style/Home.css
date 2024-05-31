@@ -1,11 +1,18 @@
 .box {
-    border: 0.2rem solid;
-     height: 60vh;
-    border-width: 0.4rem;
-    border-radius: 0.6rem;
+  border: 0.2rem solid;
+  height: 80vh;
+  position: relative;
+  border-radius: 0.6rem;
 }
 
 .introduction {
-    margin: 2rem;
-    padding: 2rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.coverPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
