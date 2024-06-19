@@ -14,12 +14,7 @@ const Contact = () => {
     <div className="contact">
       <h2>Book an Appointment?</h2>
 
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-        dolor magnam neque atque nesciunt nisi molestias obcaecati praesentium,
-        aperiam laborum! Molestias, rem pariatur eius officia voluptatum sequi
-        blanditiis voluptas facere?
-      </div>
+      <div>Please enter the form below to start the service.</div>
       <div className="contactForm">
         <Form method="post" action="/help/contact">
           <label>
@@ -30,7 +25,7 @@ const Contact = () => {
             <span>Message</span>
             <textarea name="message" required></textarea>
           </label>
-          <Calendar monthsToShow={12} />
+          {/* <Calendar monthsToShow={12} /> */}
           <button>Submit</button>
         </Form>
 

@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="box">
-        <img className = "coverPhoto" src={coverImage} alt="image description" />
+        <img className="coverPhoto" src={coverImage} alt="image description" />
       </div>
 
       <p className="py-6 m-6">
@@ -22,7 +22,4 @@ const Home = () => {
     </>
   );
 };
-
-Home.propTypes = {};
-
 export default Home;

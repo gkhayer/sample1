@@ -1,16 +1,16 @@
 import { NavLink, Outlet } from "react-router-dom";
+import "../style/HelpLayout.css";
 
 const HelpLayout = () => {
   return (
     <div className="help-layout">
       <h2>Contact Us!</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-        veritatis?
+        Are you seeking to enhance your online presence? Get in touch with us.
       </p>
       <nav>
-        <NavLink to="faq">View the Frequently asked Questions</NavLink>
         <NavLink to="contact">Contact Us!</NavLink>
+        <NavLink to="faq">View the Frequently asked Questions</NavLink>
       </nav>
 
       <Outlet />
