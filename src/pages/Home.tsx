@@ -9,7 +9,7 @@ const Home = () => {
         <img className="coverPhoto" src={coverImage} alt="image description" />
       </div>
 
-      <p className="py-6 m-6">
+      <p className="py-6 m-6 text-lg text-start">
         At Shonq Tech, we specialize in crafting dynamic websites tailored to
         your needs. From sleek portfolios to robust e-commerce platforms, our
         team ensures your online presence reflects your brand's essence. Beyond
