@@ -1,4 +1,3 @@
-// Style
 import "./App.css";
 
 import {
@@ -7,19 +6,12 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-// import ProtectedRoute from "./components/ProtectedRoute";
-// import { AuthProvider } from "./hooks/useAuth";
+
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 // Pages
 import Home from "./pages/Home";
-// import Header from "./pages/Header";
-// import AccountLayout from "./Layouts/AccountLayout";
-// import Login from "./pages/Login";
-// import Logout from "./pages/Logout";
-// import CreateUser from "./pages/addUser/CreateUser";
-// import EditUser from "./pages/addUser/EditUser";
 import AddBlog from "./pages/addBlog/AddBlog";
 import About from "./pages/About";
 
@@ -72,67 +64,12 @@ const router = createBrowserRouter(
 );
 
 const App: React.FC = (): JSX.Element => {
-  // const mainRoutes = {
-  //   path: "/",
-  //   element: <Header />,
-  //   children: [
-  //     // { path: "*", element: <Navigate to="/404" /> },
-  //     // { path: "/logout", element: <Logout /> },
-  //     // { path: "404", element: <PageNotFoundView /> },
-  //     // { path: "/login", element: <Login /> },
-  //     {
-  //       path: "/",
-  //       element: <Home />,
-  //     },
-  //     {
-  //       path: "/About",
-  //       element: <About />,
-  //     },
-  //     {
-  //       path: "/AddBlog",
-  //       element: <AddBlog />,
-  //     },
-  //     {
-  //       path: "/EditUser",
-  //       element: <EditUser />,
-  //     },
-  //     {
-  //       path: "/con",
-  //     },
-  //     {
-  //       path: "/createUser",
-  //       element: <CreateUser />,
-  //     },
-  //   ],
-  // };
-
-  // const accountRoutes = {
-  //   path: "account",
-  //   element: <AccountLayout />,
-  //   children: [{ path: "*", element: <Navigate to="/404" /> }],
-  // };
-
-  // const routing = useRoutes([mainRoutes, accountRoutes]);
-
+  
   return (
     <Provider store={store}>
-      {/* <AuthProvider> */}
       <RouterProvider router={router} />
-      {/* </AuthProvider> */}
     </Provider>
   );
 };
 
 export default App;
-
-//           {routing}
-//           <div>
-//             <div className="container">
-//               <article>
-//                 <ProtectedRoute>
-//                   {/* <Home /> */}
-//                   <EditUser/>
-//                 </ProtectedRoute>
-//               </article>
-//             </div>
-//           </div>
