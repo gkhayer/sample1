@@ -86,7 +86,7 @@ const About = () => {
       <div>
         <h2 className={heading}>Contact Us</h2>
         <p>Email: info@shonq.tech</p>
-        <p>Phone: (408)663-7453</p>
+        <p>Phone: (408) 663-7453</p>
 
 
         {/* <p>Follow us on Facebook, Twitter, and LinkedIn.</p> */}
