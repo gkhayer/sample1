@@ -86,11 +86,10 @@ const About = () => {
       <div>
         <h2 className={heading}>Contact Us</h2>
         <p>Email: info@shonq.tech</p>
-        <p>Phone: (123) 456-7890</p>
+        <p>Phone: (408)663-7453</p>
 
-        <p>Address: 123 Tech Avenue, City, State, ZIP</p>
 
-        <p>Follow us on Facebook, Twitter, and LinkedIn.</p>
+        {/* <p>Follow us on Facebook, Twitter, and LinkedIn.</p> */}
       </div>
     </div>
   );
