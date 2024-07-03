@@ -96,3 +96,128 @@ const About = () => {
 };
 
 export default About;
+// /************************************************
+//  ******* YOUR IMPLEMENTATION STARTS HERE ********
+//  ************************************************/
+//  class EventLogger {
+
+//   constructor(batchInterval = 1000) {
+//     this.batchInterval = batchInterval;
+//     this.multipleEvents = [];
+    
+//   }
+
+//   async logEvent(eventName, data) {
+//     // DO NOT REMOVE -- This is for testing your output
+//     _logToConsole(`[LOGGED] ${eventName}`);
+
+//     // Your part 1 implementation goes here
+//     // {"events": [...]}
+//     this.multipleEvents.push(eventName)
+//     setTimeout(async () => {
+//       await sendRequest({ 'events': this.multipleEvents })
+
+//     },
+//       this.batchInterval
+//     )
+//   }
+// }
+
+// const eventLogger = new EventLogger();
+// // Your part 1 implementation goes here as well
+
+// const gridContainer = document.getElementById('grid')
+
+// // document.addEventListener('contentLoaded', ()=>{
+// const colorSquares = document.querySelectorAll('.square')
+// colorSquares.forEach(square => {
+//   square.addEventListener('click', () => {
+//     const colorValue = square.style.backgroundColor
+//     console.log({ colorValue })
+//     eventLogger.logEvent('click', { "color": colorValue })
+//   })
+// })
+// // })
+
+// /******* YOUR IMPLEMENTATION ENDS HERE *********/
+
+
+
+
+
+
+
+
+
+// /* Helper functions for reference - DO NOT EDIT */
+// let startTime = Date.now();
+// let fetchTimeout = 0;
+
+// function _initializeStartTime() {
+//   startTime = Date.now();
+// }
+
+// function _logToConsole(...args) {
+//   console.log(`[${Date.now() - startTime}ms]\n`, ...args);
+// }
+
+// function _setFetchResponseDelay(timeout = 0) {
+//   fetchTimeout = timeout;
+// }
+
+// function _resetFetchResponseDelay() {
+//   fetchTimeout = 0;
+// }
+
+// function sendRequest(body) {
+//   let fetchTimeoutId = undefined;
+
+//   const fetchPromise = new Promise((resolve) => {
+//     fetchTimeoutId = setTimeout(() => {
+//       resolve();
+//     }, fetchTimeout);
+//   });
+
+//   const logPayload = JSON.stringify(body, null, 2);
+
+//   _logToConsole(`[REQUEST START]\n`, logPayload);
+
+//   fetchPromise.then(() => {
+//     _logToConsole(`[REQUEST END]\n`, logPayload);
+//   });
+
+//   fetchPromise.abort = () => {
+//     clearTimeout(fetchTimeoutId);
+//     _logToConsole(`[REQUEST ABORTED]\n`, logPayload);
+//   };
+
+//   return fetchPromise;
+// }
+// /* Helper functions end here */
+
+
+// // ------------ DO NOT EDIT BELOW ------------
+// function testBatching() {
+//   _initializeStartTime();
+
+//   const eventLogger = new EventLogger(1000);
+//   eventLogger.logEvent("first-batch-1");
+//   eventLogger.logEvent("first-batch-2");
+//   eventLogger.logEvent("first-batch-3");
+
+//   setTimeout(() => {
+//     eventLogger.logEvent("second-batch-1");
+//   }, 1100);
+// }
+
+// /* IGNORE BELOW: THEY ARE FOR BUTTON SETUP */
+// if (!document.getElementById("test-button")) {
+//   const btn = document.createElement("button");
+//   btn.id = "test-button";
+//   btn.innerText = "Run Tests for Part 2";
+//   btn.addEventListener("click", () => {
+//     testBatching();
+//   });
+//   document.body.appendChild(btn);
+// }
+
