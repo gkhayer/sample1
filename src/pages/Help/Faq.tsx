@@ -1,20 +1,13 @@
+import { faqs } from "../../../data/faqs.json";
+import Accordian from "./Accordian";
+
 const faq = () => {
   return (
-    <div className="faq">
-      <div className="question">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique
-        perspiciatis accusantium facere quaerat possimus, officiis ut repellat.
-        Dolorum, labore.
-      </div>
-      <div className="question">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique
-        perspiciatis accusantium facere quaerat possimus, officiis ut repellat.
-        Dolorum, labore.
-      </div>
-      <div className="question">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique
-        perspiciatis accusantium facere quaerat possimus, officiis ut repellat.
-        Dolorum, labore.
+    <div className="w-full h-screen">
+      <div className="p-4">
+          {faqs.map((faq) => (
+            <Accordian question={faq.question} answer={faq.answer} />
+          ))}
       </div>
     </div>
   );

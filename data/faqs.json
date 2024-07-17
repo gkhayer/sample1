@@ -1,0 +1,37 @@
+{
+ "faqs" : [
+    {
+      "question": "How long will it take to complete the website?",
+      "answer":
+        "The timeline for completing a website depends on the design and complexity. An e-commerce website typically takes longer than a static website due to the need for additional functionalities like product listings, payment gateways, and inventory management. For a basic static website, the development time might range from a few weeks to a month, whereas an e-commerce site could take several months to complete. The exact timeline will be determined based on your specific requirements and the scope of the project."
+    },
+    {
+      "question": "Can you create a custom design based on my brand identity?",
+      "answer":
+        " We definitely encourage the unique identity of your website. We are here to guide and provide you with custom designs tailored to your brand identity. Our team will work closely with you to understand your vision and create a design that reflects your brands personality and values."
+    },
+    {
+      "question": "How many design revisions are included?",
+      "answer":
+        "  We provide 3 revisions of the final project, which does not include the initial design setup and requirement gathering. This ensures we can make necessary adjustments to meet your expectations and align the design with your vision."
+    },
+    {
+      "question":
+        "Will the website be optimized for different devices and screen sizes?",
+      "answer":
+        " Yes, the website will be optimized for different devices and screen sizes. We ensure that your site is fully responsive, providing an excellent user experience on desktops, tablets, and mobile devices."
+    },
+    {
+      "question":
+        "  Can you set up online stores, payment gateways, and inventory management?",
+      "answer":
+        "Yes, we can set up online stores, payment gateways, and inventory management. Our team is experienced in integrating these functionalities to create a seamless e-commerce experience for your customers."
+    },
+    {
+      "question": "Do you offer any guarantees or refunds?",
+      "answer":
+        " No, we do not offer refunds. However, we are committed to working closely with you to ensure your satisfaction with the final product and will make necessary adjustments to meet your expectations."
+    }
+  ]
+
+}

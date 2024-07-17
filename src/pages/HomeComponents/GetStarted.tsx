@@ -17,7 +17,7 @@ const packages = [
     textColor: "text-blue-600",
   },
   {
-    price: "$20",
+    price: "$50",
     packTitle: "Business Boost Pack",
     desc: "This Service is suitable for small business looking to kick start their digital journey",
     features: {
@@ -29,7 +29,7 @@ const packages = [
     textColor: "text-blue-600",
   },
   {
-    price: "$20",
+    price: "$70",
     packTitle: "Corporate Excellence",
     desc: "This Service is suitable for small business looking to kick start their digital journey",
     features: {
@@ -41,7 +41,7 @@ const packages = [
     textColor: "text-blue-600",
   },
   {
-    price: "$20",
+    price: "$90",
     packTitle: "Enterprice Pro",
     desc: "This Service is suitable for small business looking to kick start their digital journey",
     features: {
