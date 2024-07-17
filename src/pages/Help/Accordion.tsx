@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AccordianType } from "../../types/types";
 
-const Accordian = ({ question, answer }: AccordianType) => {
+const Accordion = ({ question, answer }: AccordianType) => {
   const [accordianOpen, setAccordianOpen] = useState(false);
 
   return (
@@ -51,4 +51,4 @@ const Accordian = ({ question, answer }: AccordianType) => {
   );
 };
 
-export default Accordian;
+export default Accordion;
