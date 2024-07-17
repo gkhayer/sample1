@@ -1,9 +1,5 @@
 import { useState } from "react";
-
-type AccordianType = {
-  question: string;
-  answer: string;
-};
+import { AccordianType } from "../../types/types";
 
 const Accordian = ({ question, answer }: AccordianType) => {
   const [accordianOpen, setAccordianOpen] = useState(false);

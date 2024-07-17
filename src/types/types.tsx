@@ -32,3 +32,8 @@ export type Career = {
   export interface ProductTypes {
     products: Product[];
   }
+
+  export type AccordianType = {
+    question: string;
+    answer: string;
+  };
