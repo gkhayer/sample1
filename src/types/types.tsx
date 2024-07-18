@@ -37,3 +37,22 @@ export type Career = {
     question: string;
     answer: string;
   };
+
+
+  // Home
+
+  export type PricesInfo = {
+    price: string;
+    packTitle: string;
+    desc: string;
+    features: Features;
+    bgColor: string;
+    textColor: string;
+  };
+  
+
+ export type Features = {
+    feature1: string;
+    feature2: string;
+    feature3: string;
+  };

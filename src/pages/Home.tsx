@@ -1,5 +1,5 @@
 import "../style/Home.css";
-import GetStarted from "./HomeComponents/getStarted";
+import GetStarted from "./HomeComponents/MonthlyPackage";
 
 const coverImage = "../../public/yelow tech bg.png";
 const boxes = "flex items-center justify-center";
