@@ -1,5 +1,5 @@
 import { faqs } from "../../../data/faqs.json";
-import Accordion from "./Accordion";
+import Accordion from "./Accordian";
 
 const faq = () => {
   return (

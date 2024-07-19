@@ -1,5 +1,5 @@
 import "../style/Home.css";
-import GetStarted from "./HomeComponents/MonthlyPackage";
+import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
 
 const coverImage = "../../public/yelow tech bg.png";
 const boxes = "flex items-center justify-center";
@@ -69,7 +69,7 @@ const Home = () => {
       </p>
 
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <GetStarted />
+      <SelectPackageTypeInfo />
     </>
   );
 };

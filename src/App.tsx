@@ -28,13 +28,21 @@ import {
   CareersDetail,
 } from "./pages/careers/CareersDetail";
 import CareersError from "./pages/careers/CareersError";
+import YearlyPack from "./pages/HomeComponents/YearlyPack";
+import MonthlyPackage from "./pages/HomeComponents/MonthlyPackage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
+      <Route  element={<Home />}>
+        <Route path="yearly" element={<YearlyPack />} />
+        <Route path="monthly" element={<MonthlyPackage />} />
+      </Route>
       <Route path="about" element={<About />} />
       <Route path="addblog" element={<AddBlog />} />
+      <Route path="yearly" element={<YearlyPack />} />
+      <Route path="monthly" element={<MonthlyPackage />} />
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} action={contactAction} />
@@ -64,7 +72,6 @@ const router = createBrowserRouter(
 );
 
 const App: React.FC = (): JSX.Element => {
-  
   return (
     <Provider store={store}>
       <RouterProvider router={router} />

@@ -4,7 +4,7 @@ import { PricesInfo } from "../../types/types";
 const heading =
   "mb-4 text-3xl font-bold dark:text-white md:text-5xl lg:text-6xl";
   
-  const PackageLayout = ({
+  const PackageCards = ({
     price,
     packTitle,
     desc,
@@ -43,4 +43,4 @@ const heading =
     );
   };
 
-  export default PackageLayout
+  export default PackageCards

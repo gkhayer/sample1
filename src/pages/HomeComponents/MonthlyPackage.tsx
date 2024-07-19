@@ -1,5 +1,4 @@
-import PackageLayout from "./PackageLayout";
-import SelectPackageTypeInfo from "./SelectPackageTypeInfo";
+import PackageCards from "./PackageCards";
 
 const packages = [
   {
@@ -11,7 +10,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-yellow-400",
+    bg: "bg-[#cc856e]",
     textColor: "text-blue-600",
   },
   {
@@ -23,7 +22,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-pink-300",
+    bg: "bg-orange-300",
     textColor: "text-blue-600",
   },
   {
@@ -47,28 +46,25 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-violet-600",
+    bg: "bg-[#c8c82d]",
     textColor: "text-blue-600",
   },
 ];
 
 const MonthlyPackage = () => {
   return (
-    <>
-      <SelectPackageTypeInfo />
-      <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 text-center">
-        {packages.map((pack) => (
-          <PackageLayout
-            price={pack.price}
-            packTitle={pack.packTitle}
-            desc={pack.desc}
-            features={pack.features}
-            bgColor={pack.bg}
-            textColor={pack.textColor}
-          />
-        ))}
-      </div>
-    </>
+    <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 text-center border-indigo-500">
+      {packages.map((pack) => (
+        <PackageCards
+          price={pack.price}
+          packTitle={pack.packTitle}
+          desc={pack.desc}
+          features={pack.features}
+          bgColor={pack.bg}
+          textColor={pack.textColor}
+        />
+      ))}
+    </div>
   );
 };
 
