@@ -9,14 +9,21 @@ const Breadcrumbs = () => {
     .split("/")
     .filter((crumb) => crumb != "")
     .map((crumb) => {
-      currentLink = +`/${crumb}`;
+      currentLink = currentLink.concat(`/${crumb}`);
       return (
         <div className="crumb" key={crumb}>
           <Link to={currentLink}>{crumb}</Link>
         </div>
       );
     });
-  return <div className="breadcrumbs">{crumbs}</div>;
+  return (
+    <div className="breadcrumbs">
+      {location.pathname.includes("yearly") ||
+      location.pathname.includes("monthly")
+        ? ""
+        : crumbs}
+    </div>
+  );
 };
 
 export default Breadcrumbs;

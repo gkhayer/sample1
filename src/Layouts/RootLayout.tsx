@@ -7,8 +7,8 @@ const RootLayout = () => {
     <div className="root-layout">
       <header>
         <nav>
-          <h1><a href='/'>Logo</a></h1>
-          <NavLink to="/">Home</NavLink>
+          <h1><a href='/monthly'>Logo</a></h1>
+          <NavLink to="/monthly">Home</NavLink>
           <NavLink to="about">About</NavLink>
           {/* <NavLink to="addblog">Add Blog</NavLink> */}
           {/* <NavLink to="careers">Careers</NavLink> */}
