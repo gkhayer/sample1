@@ -5,8 +5,8 @@ const faq = () => {
   return (
     <div className="w-full h-screen">
       <div className="p-4">
-          {faqs.map((faq) => (
-            <Accordion question={faq.question} answer={faq.answer} />
+          {faqs.map((faq, key) => (
+            <Accordion key={key} question={faq.question} answer={faq.answer} />
           ))}
       </div>
     </div>

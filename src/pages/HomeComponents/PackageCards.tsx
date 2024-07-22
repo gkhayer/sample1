@@ -14,8 +14,7 @@ const PackageCards = ({
   const location = useLocation();
 
   return (
-    <div className={`border-2 p-12 m-1 ${bgColor}`}>
-      <div>
+    <div className={`basic-full border-2 p-12 m-1 ${bgColor}`}>
         <h2 className={heading}>
           {price} <span className="text-xl">/ {location.pathname.includes('monthly') ? 'Month' : 'Yr'}</span>
         </h2>
@@ -28,20 +27,17 @@ const PackageCards = ({
         <div className="text-left">
           <h1>Features</h1>
           <ul className="list-disc">
-            {Object.values(features).map((val) => (
-              <li>{val}</li>
+            {Object.values(features).map((val, key) => (
+              <li key={key}>{val}</li>
             ))}
           </ul>
         </div>
-      </div>
-      <div className="p-4">
         <button
           className={`border-solid border-2 border-gray-300 ${bgColor} p-2 m-1 relative bottom-0 cursor-pointer`}
         >
           <Link to="help/contact">Get Started</Link>
         </button>
       </div>
-    </div>
   );
 };
 
