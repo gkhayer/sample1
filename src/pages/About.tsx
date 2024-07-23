@@ -1,8 +1,9 @@
 import '../style/About.css';
+import '../../tailwind.config'
 
 const subheading = "text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
 
-const heading = "mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
+const heading = `mb-4 text-3xl font-bold text-[theme('colors.blue.500')] dark:text-white md:text-5xl lg:text-6xl`
 
 const About = () => {
   return (

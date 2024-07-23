@@ -40,7 +40,7 @@ const PackageCards = ({
       <button
         className={`border-solid border-2 border-gray-300 ${bgColor} p-2 m-1 relative bottom-0 cursor-pointer`}
       >
-        <Link to="help/contact">Get Started</Link>
+        <Link to="/help/contact">Get Started</Link>
       </button>
     </div>
   );

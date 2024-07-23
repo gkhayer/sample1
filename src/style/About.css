@@ -1,3 +1,6 @@
 .aboutUs {
     font-size: large;
+    border: 1px dotted;
+    padding: 4rem;
+    border-radius: 1rem;
 }
