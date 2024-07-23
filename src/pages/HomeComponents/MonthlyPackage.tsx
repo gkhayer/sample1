@@ -15,7 +15,7 @@ const packages = [
   },
   {
     price: "$50",
-    packTitle: "Business Boost Pack",
+    packTitle: "Business Boost",
     desc: "This Service is suitable for small business looking to kick start their digital journey",
     features: {
       feature1: "Responsive Web Designing",
