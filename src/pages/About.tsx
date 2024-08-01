@@ -1,10 +1,116 @@
 import "../style/About.css";
 import "../../tailwind.config";
+import React from "react";
 
 const subheading =
   "text-2xl font-normal text-gray-500 lg:text-2xl text-[#30bd73] text-left";
 
-const heading = `mb-4 text-xl font-bold text-[theme('colors.blue.500')] dark:text-white md:text-4xl lg:text-4xl`;
+const heading = `my-4 text-xl font-bold text-[theme('colors.blue.500')] dark:text-white md:text-4xl lg:text-4xl`;
+
+type Subheading = {
+  title: string;
+  desc: string;
+};
+type AboutUsType = {
+  heading: string;
+  subheading: Subheading[];
+  description: string;
+};
+
+const aboutUsData: AboutUsType[] = [
+  {
+    heading: "Our Services",
+    subheading: [
+      {
+        title: "Website Development",
+        desc: "We specialize in creating beautiful, functional, and user-friendly websites tailored to your business needs. From sleek and simple designs to complex e-commerce platforms, we ensure your online presence stands out.",
+      },
+      {
+        title: "Search Engine Optimization (SEO)",
+        desc: "  Our SEO experts will optimize your website to improve its visibility on search engines, helping potential customers find you more easily. We use the latest techniques to ensure your site ranks high and attracts the right audience.",
+      },
+      {
+        title: "Digital Marketing",
+        desc: " Effective marketing is key to business growth. Our digital marketing services include social media management, content creation, email marketing, and pay-per-click advertising. We craft strategies that resonate with your target audience and drive engagement.",
+      },
+      {
+        title: "E-commerce Solutions",
+        desc: "Ready to sell online? We create robust e-commerce platforms that offer a seamless shopping experience. From product listings to secure payment gateways, we handle everything to get your online store up and running.",
+      },
+      {
+        title: "Comprehensive Online Presence",
+        desc: "Building an online presence goes beyond just having a website. We offer a full suite of services to establish and grow your brand online. This includes branding, graphic design, and ongoing support to ensure your digital footprint continues to expand.",
+      },
+    ],
+
+    description: "",
+  },
+  {
+    heading: "Our Commitment",
+    subheading: [
+      {
+        title: "",
+        desc: "",
+      },
+    ],
+    description:
+      "At Shonq Tech, we believe in a personalized approach. We take the time to understand your business goals and create customized solutions that deliver real results. Our team of experienced professionals is dedicated to providing exceptional service and support, ensuring your business not only meets but exceeds its online potential.",
+  },
+  {
+    heading: "Why Choose Us?",
+    subheading: [
+      {
+        title: "Expertise",
+        desc: "Our team has years of experience in web development, SEO, and digital marketing.",
+      },
+      {
+        title: "Tailored Solutions",
+        desc: "We offer personalized services to meet the unique needs of your business.",
+      },
+      {
+        title: "Results-Driven",
+        desc: "Our focus is on delivering measurable results that contribute to your business growth.",
+      },
+      {
+        title: "Support",
+        desc: "We provide ongoing support to help you navigate the digital landscape and achieve long-term success.",
+      },
+    ],
+    description: "",
+  },
+
+  {
+    heading: "Business Formation Services by Shonq.Tech",
+    subheading: [
+      {
+        title: "Expertise",
+        desc: "We have experience in forming all types of business structures, including LLCs, Sole Proprietorships, Partnerships, Corporations, and more.",
+      },
+      {
+        title: "Nationwide Service",
+        desc: "No matter where you are in the USA, Shonq.Tech provides business formation services across all 50 states.",
+      },
+      {
+        title: "Personalized Guidance",
+        desc: "Our team offers personalized consultations to help you choose the best business structure for your specific needs and goals.",
+      },
+      {
+        title: "Seamless Process",
+        desc: "We handle all the paperwork and legal requirements, making the formation process smooth and hassle-free for you.",
+      },
+      {
+        title: "Quick Turnaround",
+        desc: "Our efficient process ensures that your business is up and running as quickly as possible.",
+      },
+      {
+        title: "Seamless Process",
+        desc: "We handle all the paperwork and legal requirements, making the formation process smooth and hassle-free for you.",
+      },
+    ],
+    description:
+      "At Shonq.Tech, we specialize in helping entrepreneurs and businesses establish their presence in the USA by offering comprehensive business formation services for various business structures. Whether you're looking to start an LLC, a Sole Proprietorship, or any other type of business entity, our expert team is here to guide you through every step of the process.Why Choose Shonq.Tech?",
+  },
+];
 
 const About = () => {
   return (
@@ -21,91 +127,31 @@ const About = () => {
           to enhance your online presence, we're here to guide you every step of
           the way.
         </p>
-        <hr className="mt-[4rem] bg-gray-200 " />
-      </div>
-      <div>
-        <p className={heading}>Our Services</p>
-        <p className={subheading}>Website Development</p>
-        <p className="description">
-          We specialize in creating beautiful, functional, and user-friendly
-          websites tailored to your business needs. From sleek and simple
-          designs to complex e-commerce platforms, we ensure your online
-          presence stands out.
-        </p>
-        <p className={subheading}>Search Engine Optimization (SEO)</p>
-        <p>
-          Our SEO experts will optimize your website to improve its visibility
-          on search engines, helping potential customers find you more easily.
-          We use the latest techniques to ensure your site ranks high and
-          attracts the right audience.
-        </p>
-        <p className={subheading}>Digital Marketing</p>
-        <p>
-          Effective marketing is key to business growth. Our digital marketing
-          services include social media management, content creation, email
-          marketing, and pay-per-click advertising. We craft strategies that
-          resonate with your target audience and drive engagement.
-        </p>
-        <p className={subheading}>E-commerce Solutions</p>
-        <p>
-          Ready to sell online? We create robust e-commerce platforms that offer
-          a seamless shopping experience. From product listings to secure
-          payment gateways, we handle everything to get your online store up and
-          running.
-        </p>
-        <p className={subheading}>Comprehensive Online Presence</p>
-        <p>
-          Building an online presence goes beyond just having a website. We
-          offer a full suite of services to establish and grow your brand
-          online. This includes branding, graphic design, and ongoing support to
-          ensure your digital footprint continues to expand.
-        </p>
-        <hr className="mt-[4rem] bg-gray-200 " />
-      </div>
-      <div>
-        <p className={heading}>Our Commitment</p>
-        <p>
-          At Shonq Tech, we believe in a personalized approach. We take the time
-          to understand your business goals and create customized solutions that
-          deliver real results. Our team of experienced professionals is
-          dedicated to providing exceptional service and support, ensuring your
-          business not only meets but exceeds its online potential.
-        </p>
-        <hr className="mt-[4rem] bg-gray-200 " />
       </div>
 
-      <div>
-        <p className={heading}>Why Choose Us?</p>
-        <p>
-          <b>Expertise:</b>
-          Our team has years of experience in web development, SEO, and digital
-          marketing.
-        </p>
-        <p>
-          Tailored Solutions: We offer personalized services to meet the unique
-          needs of your business.
-        </p>
-        <p>
-          Results-Driven: Our focus is on delivering measurable results that
-          contribute to your business growth.
-        </p>
-        <p>
-          Support: We provide ongoing support to help you navigate the digital
-          landscape and achieve long-term success.
-        </p>
-        <hr className="mt-[4rem] bg-gray-200 " />
-      </div>
+      {aboutUsData.map((section, index) => (
+        <div key={index}>
+          <h2 className={heading}>{section.heading}</h2>
+          {section.subheading.map((sub, subIndex) => (
+            <React.Fragment key={subIndex}>
+              <h3 className={subheading}>{sub.title}</h3>
+              <p>{sub.desc}</p>
+            </React.Fragment>
+          ))}
+          <p>{section.description}</p>
+          <hr className="mt-[4rem] bg-gray-200 " />
+        </div>
+      ))}
 
       <div>
-        <p className={heading}>Let's Get Started</p>
+        <h1 className={heading}>Let's Get Started</h1>
         <p>
           Ready to take your business to the next level? Contact us today to
           learn how Shonq Tech can help you establish a powerful online presence
           and grow your business.
         </p>
         <div>
-          <h2 className={heading}>Contact Us</h2>
-          <p>Email: info@shonq.tech</p>
+          <h2 className={heading}>Contact Us</h2> <p>Email: info@shonq.tech</p>{" "}
           <p>Phone: (408) 663-7453</p>
         </div>
         {/* <p>Follow us on Facebook, Twitter, and LinkedIn.</p> */}
@@ -115,3 +161,19 @@ const About = () => {
 };
 
 export default About;
+
+// {aboutUsData &&
+//   aboutUsData.map((info) => (
+//     <div>
+//       <p className={heading}>{info.heading}</p>
+//       <p>
+//         <h1>{subHeadingTitle && subHeadingTitle}</h1>
+//         {/* <p>{subHeadingDesc}</p> */}
+//       </p>
+//       <p className="description">
+//         {info.description && info.description}
+//       </p>
+//     <hr className="mt-[4rem] bg-gray-200 " />
+
+//     </div>
+//   ))}
