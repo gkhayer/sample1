@@ -46,17 +46,6 @@ const aboutUsData: AboutUsType[] = [
     description: "",
   },
   {
-    heading: "Our Commitment",
-    subheading: [
-      {
-        title: "",
-        desc: "",
-      },
-    ],
-    description:
-      "At Shonq Tech, we believe in a personalized approach. We take the time to understand your business goals and create customized solutions that deliver real results. Our team of experienced professionals is dedicated to providing exceptional service and support, ensuring your business not only meets but exceeds its online potential.",
-  },
-  {
     heading: "Why Choose Us?",
     subheading: [
       {
@@ -109,6 +98,17 @@ const aboutUsData: AboutUsType[] = [
     ],
     description:
       "At Shonq.Tech, we specialize in helping entrepreneurs and businesses establish their presence in the USA by offering comprehensive business formation services for various business structures. Whether you're looking to start an LLC, a Sole Proprietorship, or any other type of business entity, our expert team is here to guide you through every step of the process.Why Choose Shonq.Tech?",
+  },
+  {
+    heading: "Our Commitment",
+    subheading: [
+      {
+        title: "",
+        desc: "",
+      },
+    ],
+    description:
+      "At Shonq Tech, we believe in a personalized approach. We take the time to understand your business goals and create customized solutions that deliver real results. Our team of experienced professionals is dedicated to providing exceptional service and support, ensuring your business not only meets but exceeds its online potential.",
   },
 ];
 
