@@ -1,7 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 
-const AccountLayout = (props: any) => {
+const AccountLayout = () => {
   return (
     <div>AccountLayout</div>
   )

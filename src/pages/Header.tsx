@@ -1,9 +1,9 @@
-import { useAppSelector } from "../redux/store";
+// import { useAppSelector } from "../redux/store";
 import '../style/Header.css';
 
 
 const Header = () => {
-  const cartItems = useAppSelector((state) => state.cart.carts);
+  // const cartItems = useAppSelector((state) => state.cart.carts);
 
   return (
     <nav className="navigation">

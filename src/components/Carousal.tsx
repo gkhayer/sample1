@@ -1,7 +1,5 @@
-// create input and add new person
 
 import { useEffect, useRef, useState } from "react";
-import useFetch from "../hooks/useFetch";
 
 type dataType = {
   url: "string";
@@ -18,26 +16,26 @@ const Carousal = () => {
   }
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const handlePrev = () => {
-    carousalRef &&
-      carousalRef.current &&
-      carousalRef.current.scrollTo({
-        behavior: "smooth",
-        left: carousalRef.current.scrollLeft - carousalRef.current.clientWidth,
-      });
-  };
+  // const handlePrev = () => {
+  //   carousalRef &&
+  //     carousalRef.current &&
+  //     carousalRef.current.scrollTo({
+  //       behavior: "smooth",
+  //       left: carousalRef.current.scrollLeft - carousalRef.current.clientWidth,
+  //     });
+  // };
 
-  const handleNext = () => {
-    carousalRef &&
-      carousalRef.current &&
-      carousalRef.current.scrollTo({
-        behavior: "smooth",
-        left:
-          carousalRef &&
-          carousalRef.current &&
-          carousalRef.current.scrollLeft + carousalRef.current.clientWidth,
-      });
-  };
+  // const handleNext = () => {
+  //   carousalRef &&
+  //     carousalRef.current &&
+  //     carousalRef.current.scrollTo({
+  //       behavior: "smooth",
+  //       left:
+  //         carousalRef &&
+  //         carousalRef.current &&
+  //         carousalRef.current.scrollLeft + carousalRef.current.clientWidth,
+  //     });
+  // };
 
   const newWidth =
     carousalRef && carousalRef.current && carousalRef.current.children.length;
@@ -56,8 +54,6 @@ const Carousal = () => {
 
   return (
     <div>
-      {/* carousal */}
-
       <div className="flex items-center">
         {error && <p>Error: {error}</p>}
         {isPending && <p>...Loading</p>}

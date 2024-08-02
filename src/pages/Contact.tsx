@@ -1,7 +1,6 @@
 import {
   Menu,
   MenuButton,
-  MenuItem,
   MenuItems,
   Transition,
 } from "@headlessui/react";
@@ -11,6 +10,8 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 const Contact = () => {
   const url = "http://localhost:8001/blogs";
   const data = useFetch(url);
+
+  console.log(data)
 
   return (
     <Menu as="div" className="relative inline-block text-left">

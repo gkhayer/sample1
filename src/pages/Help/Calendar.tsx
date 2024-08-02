@@ -31,6 +31,32 @@ const weekdays = [
   "Saturday",
 ];
 
+const calendarContainer =
+  "flex flex-col justify-start bg-white rounded-md p-4 text-black font-serif w-1/2 border border-gray-500";
+const tabsHeader = "relative h-8 w-full";
+const list =
+  `flex justify-around items-center bg-[#e3e7f0] rounded-sm w-full absolute inset-y-0`
+
+const listItems ="text-gray-500 list-none w-full p-1.5"
+
+const selected = "bg-white text-black list-none w-full rounded-sm font-bold p-1.5 mr-px"
+
+const specificDateSection = "flex justify-between p-2"
+
+const calendarContent = "h-[52vh] w-full overflow-scroll scroll-smooth scrollbar-hide"
+
+const calendar = "bg-[#f2f5fa] w-full rounded-md"
+
+const gridContainer = "grid grid-rows-[auto]"
+
+const weekdayclassName = "flex justify-around font-bold"
+
+const applyButton = `bg-[#111629] text-white rounded-md border border-red-500 p-2`
+
+const monthHeader = `flex justify-between bg-[#e7ebf4] p-2 m-1 relative top-0 z-10`
+
+const buttonContainer = "flex justify-center mt-6"
+
 const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
   const [toggle, setToggle] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -64,11 +90,11 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
 
   return (
     <>
-      <div style={calendarContainer}>
-        <div style={tabsHeader}>
-          <div style={list}>
+      <div className={calendarContainer}>
+        <div className={tabsHeader}>
+          <div className={list}>
             {calendarTabs.map((tab) => (
-              <span key={tab.id} style={tab.selected ? selected : listItems}>
+              <span key={tab.id} className={tab.selected ? selected : listItems}>
                 {tab.name}
               </span>
             ))}
@@ -78,7 +104,7 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
           style={{
             transform: `scale(${isHovered ? 1.1 : 1})`,
             transition: "transform 0.2s ease-in-out",
-            margin: '1rem'
+            margin: "1rem",
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -90,7 +116,7 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
           </span>
           <div className="calendarSection">
             {/* Specific date and Toggle */}
-            <div style={specificDateSection}>
+            <div className={specificDateSection}>
               <span>Specific date</span>
               <span
                 style={{ cursor: "pointer", color: "#4e81ee" }}
@@ -100,26 +126,26 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
               </span>
             </div>
             {/* Starting Calendar */}
-            <div style={calendar}>
-              <div style={weekdayStyle}>
+            <div className={calendar}>
+              <div className={weekdayclassName}>
                 {weekdays.map((weekday, index) => (
                   <div
-                  key={index}
+                    key={index}
                     style={{
                       color: index === 0 ? "red" : "black",
-                      ...gridItem,
+                       padding: ".5rem"
                     }}
                   >
                     {weekday.slice(0, 1)}
                   </div>
                 ))}
               </div>
-              <div style={calendarContent}>
-                <div style={gridContainer}>
+              <div className={calendarContent}>
+                <div className={gridContainer}>
                   {months.map((month, index) => (
                     <>
-                      <div key={index} style={gridContainer}>
-                        <div style={monthHeader}>
+                      <div key={index} className={gridContainer}>
+                        <div className={monthHeader}>
                           {month.toLocaleString("default", { month: "long" })}{" "}
                           {month.getFullYear()}
                         </div>
@@ -184,8 +210,8 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
             </div>
           </div>
         </div>
-        <div style={buttonContainer}>
-          <button style={applyButton}>Apply</button>
+        <div className={buttonContainer}>
+          <button className={applyButton}>Apply</button>
         </div>
       </div>
     </>
@@ -193,112 +219,3 @@ const Calendar: React.FC<CalendarProps> = ({ monthsToShow }) => {
 };
 
 export default Calendar;
-
-const calendarContainer = {
-  display: "flex",
-  flexFlow: "column nowrap",
-  justifyContent: "flex-start",
-  backgroundColor: "white",
-  borderRadius: ".5rem",
-  padding: "1rem",
-  color: "black",
-  fontFamily: "ui-serif",
-  width: "50%",
-  border: "1px solid grey",
-};
-
-const tabsHeader = {
-  position: "relative",
-  height: "2rem",
-  width: "100%",
-};
-
-const list = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  backgroundColor: "#e3e7f0",
-  borderRadius: ".2rem",
-  width: "100%",
-  position: "absolute",
-  top: 0,
-  bottom: 0,
-};
-
-const listItems = {
-  color: "grey",
-  listStyle: "none",
-  width: "100%",
-  padding: ".3rem",
-};
-
-const selected = {
-  backgroundColor: "white",
-  color: "black",
-  listStyle: "none",
-  width: "100%",
-  borderRadius: ".2rem",
-  fontWeight: "bold",
-  padding: ".4rem",
-  marginRight: "1px",
-};
-
-const specificDateSection = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: ".8rem",
-};
-
-const calendarContent = {
-  height: "52vh",
-  width: "100%",
-  overflow: "scroll",
-  scrollBehavior: "smooth",
-  scrollbarWidth: "none",
-};
-
-const calendar = {
-  backgroundColor: "#f2f5fa",
-  width: "100%",
-  borderRadius: ".4rem",
-};
-
-const gridContainer = {
-  display: "grid",
-  gridTemplateRows: "auto",
-};
-
-const gridItem = {
-  padding: ".5rem",
-};
-
-const weekdayStyle = {
-  display: "flex",
-  justifyContent: "space-around",
-  fontWeight: "bold",
-};
-
-const applyButton = {
-  backgroundColor: "#111629",
-  color: "white",
-  borderRadius: ".5rem",
-  border: "1px solid red",
-  padding: ".5rem",
-};
-
-const monthHeader = {
-  display: "flex",
-  justifyContent: "space-between",
-  backgroundColor: "#e7ebf4",
-  padding: ".5rem",
-  margin: ".3rem",
-  position: "sticky",
-  top: 0,
-  zIndex: 4,
-};
-
-const buttonContainer = {
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "1.5rem",
-};
