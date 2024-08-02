@@ -3,13 +3,20 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import "../style/Header.css";
 import Footer from "../pages/Footer";
 
+const Logo = "../../public/Logo.png";
+
 const RootLayout = () => {
   return (
     <div className="root-layout">
       <header>
         <nav>
           <h1>
-            <a href="/monthly">Logo</a>
+            <img
+              className="coverPhoto rounded-l-lg"
+              src={Logo}
+              alt="Shonq Logo"
+              style={{ height: "2rem", padding: "0" }}
+            />
           </h1>
           <NavLink to="/monthly">Home</NavLink>
           <NavLink to="about">About</NavLink>
