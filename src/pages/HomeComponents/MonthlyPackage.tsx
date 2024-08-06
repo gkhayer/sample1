@@ -10,7 +10,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-[#cc856e]",
+    bg: "bg-[#eb9ab2]",
     textColor: "text-blue-600",
   },
   {
@@ -22,7 +22,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-orange-300",
+    bg: "bg-[#efcfe3]",
     textColor: "text-blue-600",
   },
   {
@@ -34,7 +34,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-green-950",
+    bg: "bg-[#e9f2d8]",
     textColor: "text-blue-600",
   },
   {
@@ -46,7 +46,7 @@ const packages = [
       feature2: "Basic Branding Services",
       feature3: "Color and Font selection",
     },
-    bg: "bg-[#c8c82d]",
+    bg: "bg-[#b3dee2]",
     textColor: "text-blue-600",
   },
 ];

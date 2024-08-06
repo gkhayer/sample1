@@ -7,33 +7,33 @@ const boxes = "flex items-center justify-center";
 const cells = [
   {
     title: "Branding",
-    color: "border-teal-300",
-    bg: "bg-teal-300", //'#ff738f'
+    color: "border-[#809bce]",
+    bg: "bg-[#809bce]",
   },
   {
     title: "Digital Marketing",
-    color: "border-pink-400", //'#ff738f'
-    bg: "bg-pink-400", //'#ff738f'
+    color: "border-[#e27396]",
+    bg: "bg-[#e27396]",
   },
   {
     title: "Business Development",
-    color: "border-purple-400", //'#a549ff'
-    bg: "bg-purple-400", //'#a549ff'
+    color: "border-[#ffc2d1]",
+    bg: "bg-[#ffc2d1]",
   },
   {
     title: "Social Media Marketing",
-    color: "border-orange-400", //'#efa958'
-    bg: "bg-orange-400", //'#efa958'
+    color: "border-[#95b8d2]",
+    bg: "bg-[#95b8d2]",
   },
   {
     title: "SEO Services",
-    color: "border-indigo-400", //'#6522b8'
-    bg: "bg-indigo-400", //'#6522b8'
+    color: "border-[#b3d7e7]",
+    bg: "bg-[#b3d7e7]",
   },
   {
     title: "Marketing Plan",
-    color: "border-yellow-400", //'#ffd93b'
-    bg: "bg-yellow-400", //'#ffd93b'
+    color: "border-[#eac4d5]",
+    bg: "bg-[#eac4d5]", 
   },
 ];
 
@@ -50,7 +50,7 @@ const Home = () => {
           {cells.map((cell, key) => (
             <div
               key={key}
-              className={`border-4 ${cell.color} ${boxes} ${cell.bg}`}
+              className={`${cell.color} ${boxes} ${cell.bg}`}
             >
               {cell.title}
             </div>
