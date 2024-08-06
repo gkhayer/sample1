@@ -6,6 +6,7 @@
 :root {
   --primary: #F4C2C2;
   --secondary: #2b3452;
+  --alpha: #027fb2;
 }
 body {
   margin: 0;

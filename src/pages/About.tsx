@@ -3,9 +3,9 @@ import "../../tailwind.config";
 import React from "react";
 
 const subheading =
-  "text-2xl font-normal text-gray-500 lg:text-2xl text-[#30bd73] text-left";
+  "text-2xl font-normal text-gray-500 lg:text-2xl text-[var(--primary)] text-left";
 
-const heading = `my-4 text-xl font-bold text-[theme('colors.blue.500')] dark:text-white md:text-4xl lg:text-4xl`;
+const heading = `my-4 text-xl font-bold text-[var(--alpha)] dark:text-white md:text-4xl lg:text-4xl`;
 
 type Subheading = {
   title: string;
@@ -116,7 +116,7 @@ const About = () => {
   return (
     <div className="aboutUs">
       <div>
-        <h6 className=" text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        <h6 className=" text-3xl bg-gradient-to-r from-blue-600 via-[var(--primary)] to-indigo-400 inline-block text-transparent bg-clip-text">
           Welcome to Shonq Tech!
         </h6>
         <p>
