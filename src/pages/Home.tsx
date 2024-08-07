@@ -1,7 +1,7 @@
 import "../style/Home.css";
 import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
+import cover from '../assets/yelowtechbg.png'
 
-const coverImage = "../../public/cover photo.jpg"
 const boxes = "flex items-center justify-center";
 
 const cells = [
@@ -43,7 +43,7 @@ const Home = () => {
       <div className="box grid grid-cols-2">
         <img
           className="coverPhoto rounded-l-lg"
-          src={coverImage}
+          src={cover}
           alt="Cover Image"
         />
         <div className="grid grid-cols-2 b rounded-r-lg">

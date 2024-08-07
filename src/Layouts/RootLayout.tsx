@@ -2,8 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import "../style/Header.css";
 import Footer from "../pages/Footer";
-
-const Logo = "/Images/Logo.png"
+import Logo from '../assets/Logo.png'
 
 const RootLayout = () => {
   return (

@@ -125,7 +125,9 @@ const About = () => {
           stunning websites and providing comprehensive digital solutions that
           drive growth and success. Whether you're just starting out or looking
           to enhance your online presence, we're here to guide you every step of
-          the way.
+          the way. We provide exceptional website consulting services that help
+          businesses maximize their online presence and achieve their digital
+          goals.
         </p>
       </div>
 
