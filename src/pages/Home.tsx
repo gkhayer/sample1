@@ -1,7 +1,7 @@
 import "../style/Home.css";
 import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
 
-const coverImage = "../../public/yelow tech bg.png";
+const coverImage = "../../public/cover photo.jpg"
 const boxes = "flex items-center justify-center";
 
 const cells = [
@@ -44,7 +44,7 @@ const Home = () => {
         <img
           className="coverPhoto rounded-l-lg"
           src={coverImage}
-          alt="image description"
+          alt="Cover Image"
         />
         <div className="grid grid-cols-2 b rounded-r-lg">
           {cells.map((cell, key) => (

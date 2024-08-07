@@ -3,7 +3,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import "../style/Header.css";
 import Footer from "../pages/Footer";
 
-const Logo = "../../public/Logo.png";
+const Logo = "/Images/Logo.png"
 
 const RootLayout = () => {
   return (
@@ -14,7 +14,7 @@ const RootLayout = () => {
             <img
               className="coverPhoto rounded-l-lg"
               src={Logo}
-              alt="Shonq Logo"
+              alt="Logo"
               style={{ height: "2rem", padding: "0" }}
             />
           </h1>
