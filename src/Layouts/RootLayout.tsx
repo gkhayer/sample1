@@ -21,7 +21,7 @@ const RootLayout = () => {
           <NavLink to="about">About</NavLink>
           {/* <NavLink to="addblog">Add Blog</NavLink> */}
           {/* <NavLink to="careers">Careers</NavLink> */}
-          <NavLink to="help">Contact</NavLink>
+          <NavLink to="help/contact">Contact</NavLink>
         </nav>
         <Breadcrumbs />
       </header>
