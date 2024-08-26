@@ -1,11 +1,11 @@
 import "../style/About.css";
 import "../../tailwind.config";
-import React from "react";
+import Card from "../components/Card";
 
 const subheading =
   "text-2xl font-normal text-gray-500 lg:text-2xl text-[var(--primary)] text-left";
 
-const heading = `my-4 text-xl font-bold text-[var(--alpha)] dark:text-white md:text-4xl lg:text-4xl`;
+const heading = `my-4 text-xl font-bold text-[var(--alpha)] dark:text-white md:text-4xl lg:text-4xl p-10`;
 
 type Subheading = {
   title: string;
@@ -101,14 +101,9 @@ const aboutUsData: AboutUsType[] = [
   },
   {
     heading: "Our Commitment",
-    subheading: [
-      {
-        title: "",
-        desc: "",
-      },
-    ],
     description:
       "At Shonq Tech, we believe in a personalized approach. We take the time to understand your business goals and create customized solutions that deliver real results. Our team of experienced professionals is dedicated to providing exceptional service and support, ensuring your business not only meets but exceeds its online potential.",
+    subheading: [],
   },
 ];
 
@@ -131,31 +126,39 @@ const About = () => {
         </p>
       </div>
 
-      {aboutUsData.map((section, index) => (
-        <div key={index}>
-          <h2 className={heading}>{section.heading}</h2>
-          {section.subheading.map((sub, subIndex) => (
-            <React.Fragment key={subIndex}>
-              <h3 className={subheading}>{sub.title}</h3>
-              <p>{sub.desc}</p>
-            </React.Fragment>
-          ))}
-          <p>{section.description}</p>
-          <hr className="mt-[4rem] bg-gray-200 " />
-        </div>
-      ))}
+      <div>
+        {aboutUsData.map((section, index) => (
+          <div key={index}>
+            <h2 className={heading}>{section.heading}</h2>
+            <p>{section.description}</p>
+            <section className="grid grid-cols-3 gap-4">
+              {section.subheading &&
+                section.subheading.map((sub, subIndex) => (
+                  <Card
+                    key={subIndex}
+                    title={sub.title}
+                    description={sub.desc}
+                  />
+                ))}
+            </section>
+            <hr className="mt-[4rem] bg-gray-200 " />
+          </div>
+        ))}
+      </div>
 
       <div>
-        <h1 className={heading}>Let's Get Started</h1>
-        <p>
-          Ready to take your business to the next level? Contact us today to
-          learn how Shonq Tech can help you establish a powerful online presence
-          and grow your business.
-        </p>
-        <div>
+        <section className="letsGetStarted">
+          <h1 className={heading}>Let's Get Started</h1>
+          <p>
+            Ready to take your business to the next level? Contact us today to
+            learn how Shonq Tech can help you establish a powerful online
+            presence and grow your business.
+          </p>
+        </section>
+        <section className="contactUs">
           <h2 className={heading}>Contact Us</h2> <p>Email: info@shonq.tech</p>{" "}
           <p>Phone: (408) 663-7453</p>
-        </div>
+        </section>
         {/* <p>Follow us on Facebook, Twitter, and LinkedIn.</p> */}
       </div>
     </div>

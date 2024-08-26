@@ -41,11 +41,17 @@ const Home = () => {
   return (
     <>
       <div className="box grid grid-cols-2">
-        <img
+        {/* <img
           className="coverPhoto rounded-l-lg"
           src={cover}
           alt="Cover Image"
-        />
+        /> */}
+
+{/* border: 1px solid grey;
+    border-radius: 1rem;
+    background-color: white;
+    opacity: 0.9; */}
+        <div className="b"></div>
         <div className="grid grid-cols-2 b rounded-r-lg">
           {cells.map((cell, key) => (
             <div

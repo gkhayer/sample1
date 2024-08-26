@@ -1,6 +1,11 @@
 .aboutUs {
-    font-size: large;
-    border: 1px dotted;
-    padding: 4rem;
-    border-radius: 1rem;
+  font-size: large;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+.cardSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }

@@ -8,7 +8,7 @@ const Accordion = ({ question, answer }: AccordianType) => {
     <div className="py-2">
       <button
         onClick={() => setAccordianOpen(!accordianOpen)}
-        className="flex justify-between w-full bg-[var(--secondary)] border-[var(--primary)] rounded-lg"
+        className="flex justify-between w-full border-[var(--primary)] rounded-lg"
       >
         <span>{question}</span>
         <svg
@@ -38,7 +38,7 @@ const Accordion = ({ question, answer }: AccordianType) => {
         </svg>
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 border-2 rounded-lg
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 border-2 rounded-lg mt-2
             ${
               accordianOpen
                 ? "grid-rows-[1fr] opacity-100"

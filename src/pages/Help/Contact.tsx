@@ -1,4 +1,4 @@
-import { Form, redirect, useActionData } from "react-router-dom";
+import { Form, NavLink, redirect, useActionData } from "react-router-dom";
 
 type ContactForm = {
   email: string;
@@ -12,7 +12,6 @@ const Contact = () => {
   return (
     <div className="contact">
       <h2>Book an Appointment?</h2>
-
       <div>Please enter the form below to start the service.</div>
       <div className="contactForm">
         <Form method="post" action="/help/contact">
@@ -24,8 +23,7 @@ const Contact = () => {
             <span>Message</span>
             <textarea name="message" required></textarea>
           </label>
-          {/* <Calendar monthsToShow={12} /> */}
-          <button>Submit</button>
+          <button onClick={() => {window.location.href ='mailto:preetkaur9016@gmail.com'}}>Submit</button>
         </Form>
 
         {data && data.error && <p>{data.error}</p>}
