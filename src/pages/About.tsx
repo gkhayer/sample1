@@ -23,6 +23,10 @@ const aboutUsData: AboutUsType[] = [
         desc: "We specialize in creating beautiful, functional, and user-friendly websites tailored to your business needs. From sleek and simple designs to complex e-commerce platforms, we ensure your online presence stands out.",
       },
       {
+        title: "Promotion",
+        desc: "Promote Your Business for Just $2/Month! 🚀 Reach thousands of potential customers at the lowest price ever. Sign up today and grow your business!",
+      },
+      {
         title: "Search Engine Optimization (SEO)",
         desc: "  Our SEO experts will optimize your website to improve its visibility on search engines, helping potential customers find you more easily. We use the latest techniques to ensure your site ranks high and attracts the right audience.",
       },
@@ -108,7 +112,7 @@ const About = () => {
   return (
     <div className="aboutUs">
       <div>
-        <h6 className=" text-3xl bg-gradient-to-r from-blue-600 via-[var(--primary)] to-indigo-400 inline-block text-transparent bg-clip-text">
+        <h6 className="bg-gradient-to-r from-blue-600 via-[var(--primary)] to-indigo-400 inline-block text-transparent bg-clip-text">
           Welcome to Shonq Tech!
         </h6>
         <p>

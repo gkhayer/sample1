@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
-  --primary: #F4C2C2;
+  --primary: #f4c2c2;
   --secondary: #ededf0db;
   --lightGrey: #bbb8b8;
   --solid: #a6a6a8;
@@ -45,7 +45,7 @@ main {
 
 /* faq */
 .faq .question {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 5px 20px;
   border-radius: 4px;
   margin: 20px 0;
@@ -55,10 +55,13 @@ main {
 form {
   margin-top: 30px;
 }
-form input, form label span, form textarea {
+form input,
+form label span,
+form textarea {
   display: block;
 }
-form input, form textarea {
+form input,
+form textarea {
   margin-bottom: 30px;
   padding: 8px;
   border-radius: 4px;
@@ -72,7 +75,7 @@ form label span {
 /* careers list */
 .careers > a {
   display: block;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 4px;
   margin: 20px 0;
@@ -85,13 +88,13 @@ form label span {
   margin: 0;
 }
 .careers > a p:last-child {
- font-size: 0.8em;
- color: var(--lightGrey);
+  font-size: 0.8em;
+  color: var(--lightGrey);
 }
 
 /* careers details */
 .career-details {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 4px;
   margin: 20px 0;
@@ -103,12 +106,12 @@ form label span {
   margin: 20px auto;
   text-align: start;
 }
-.breadcrumbs > *{
+.breadcrumbs > * {
   display: inline-block;
   margin-right: 10px;
 }
 .breadcrumbs .crumb:after {
-  content: '/';
+  content: "/";
   margin-left: 10px;
 }
 .breadcrumbs .crumb:last-child:after {
@@ -138,5 +141,11 @@ form label span {
 }
 
 hr {
-  background-color: var(--lightGrey)
+  background-color: var(--lightGrey);
+}
+
+h6 {
+  color: var(--alpha);
+  font-size: 3rem;
+  line-height: 1;
 }

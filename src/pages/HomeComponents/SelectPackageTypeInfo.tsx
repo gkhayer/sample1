@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 const SelectPackageTypeInfo = () => {
   return (
     <div>
-      <h6 className="b text-5xl">Pricing</h6>
+      <h6>Pricing</h6>
       <p className="text-xl">
         Dive into the possiblities with our creative offerings. These
         meticulously crafted service packages go beyond traditional pricing

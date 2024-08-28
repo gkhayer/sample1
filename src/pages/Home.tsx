@@ -51,6 +51,7 @@ const Home = () => {
             Let's create your digital business card and make your first
             impression unforgettable!
           </p>
+          <p>🌸</p>
         </div>
         <div className="grid grid-cols-2 b borderRadius">
           {cells.map((cell, key) => (
@@ -64,7 +65,7 @@ const Home = () => {
         </div>
       </div>
 
-      <p className="py-6 m-6 text-lg text-start">
+      <p className="py-6 m-6 text-lg">
         At Shonq Tech, we specialize in crafting dynamic websites tailored to
         your needs. From sleek portfolios to robust e-commerce platforms, our
         team ensures your online presence reflects your brand's essence. Beyond
@@ -73,8 +74,8 @@ const Home = () => {
         digital realm. Trust us to not only build your website but also elevate
         your online success with comprehensive SEO solutions.
       </p>
-
       <hr className="h-px my-[5rem] border-0 dark:bg-gray-700" />
+
       <SelectPackageTypeInfo />
     </>
   );
