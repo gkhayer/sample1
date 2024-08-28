@@ -45,9 +45,9 @@ const cells = [
 const Home = () => {
   return (
     <>
-      <div className="box grid grid-cols-2">
+      <div className="box grid grid-cols-2 h-screen/2 md:h-screen lg:h-screen" >
         <div className="coverFirstHalf borderRadius">
-          <p className="p-6">
+          <p className="p-20">
             Let's create your digital business card and make your first
             impression unforgettable!
           </p>
