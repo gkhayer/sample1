@@ -1,4 +1,4 @@
-import { Form, NavLink, redirect, useActionData } from "react-router-dom";
+import { Form, redirect, useActionData } from "react-router-dom";
 
 type ContactForm = {
   email: string;

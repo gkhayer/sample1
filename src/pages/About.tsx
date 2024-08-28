@@ -2,9 +2,6 @@ import "../style/About.css";
 import "../../tailwind.config";
 import Card from "../components/Card";
 
-const subheading =
-  "text-2xl font-normal text-gray-500 lg:text-2xl text-[var(--primary)] text-left";
-
 const heading = `my-4 text-xl font-bold text-[var(--alpha)] dark:text-white md:text-4xl lg:text-4xl p-10`;
 
 type Subheading = {
@@ -131,7 +128,7 @@ const About = () => {
           <div key={index}>
             <h2 className={heading}>{section.heading}</h2>
             <p>{section.description}</p>
-            <section className="grid grid-cols-3 gap-4">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {section.subheading &&
                 section.subheading.map((sub, subIndex) => (
                   <Card
@@ -141,7 +138,6 @@ const About = () => {
                   />
                 ))}
             </section>
-            <hr className="mt-[4rem] bg-gray-200 " />
           </div>
         ))}
       </div>
@@ -166,19 +162,3 @@ const About = () => {
 };
 
 export default About;
-
-// {aboutUsData &&
-//   aboutUsData.map((info) => (
-//     <div>
-//       <p className={heading}>{info.heading}</p>
-//       <p>
-//         <h1>{subHeadingTitle && subHeadingTitle}</h1>
-//         {/* <p>{subHeadingDesc}</p> */}
-//       </p>
-//       <p className="description">
-//         {info.description && info.description}
-//       </p>
-//     <hr className="mt-[4rem] bg-gray-200 " />
-
-//     </div>
-//   ))}

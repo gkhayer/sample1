@@ -23,7 +23,7 @@ const PackageCards = ({
           </span>
         </h2>
         <span>
-          <hr className="h-px mx-5 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+          <hr className="h-px mx-5 border-0 dark:bg-gray-700"></hr>
         </span>
         <h3 className="font-bold text-xl p-5">{packTitle}</h3>
         <p className="text-left">{desc}</p>
