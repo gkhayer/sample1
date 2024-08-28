@@ -6,7 +6,10 @@
 :root {
   --primary: #F4C2C2;
   --secondary: #ededf0db;
+  --lightGrey: #bbb8b8;
+  --solid: #a6a6a8;
   --alpha: #027fb2;
+  --aliceBlue: aliceblue;
 }
 body {
   margin: 0;
@@ -27,6 +30,11 @@ button {
   background: var(--primary);
   cursor: pointer;
   border: 1px solid;
+}
+
+.borderRadius {
+  border: 1px solid var(--lightGrey);
+  border-radius: 1rem;
 }
 
 /* page content */
@@ -56,7 +64,6 @@ form input, form textarea {
   border-radius: 4px;
   border: 0;
   width: 300px;
-  /* color: var(--secondary); */
 }
 form label span {
   margin-bottom: 10px;
@@ -79,7 +86,7 @@ form label span {
 }
 .careers > a p:last-child {
  font-size: 0.8em;
- color: #bbb;
+ color: var(--lightGrey);
 }
 
 /* careers details */
@@ -108,7 +115,6 @@ form label span {
   display: none;
 }
 .breadcrumbs .crumb a {
-  /* color: #ddd; */
   text-decoration: underline;
   text-transform: capitalize;
 }
@@ -132,6 +138,5 @@ form label span {
 }
 
 hr {
-  background-color: #bbb8b8;
+  background-color: var(--lightGrey)
 }
-

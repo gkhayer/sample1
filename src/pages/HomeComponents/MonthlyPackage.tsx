@@ -53,7 +53,7 @@ const packages = [
 
 const MonthlyPackage = () => {
   return (
-    <div className="grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-center">
+    <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  text-center">
       {packages.map((pack, key) => (
         <PackageCards
         price={pack.price}

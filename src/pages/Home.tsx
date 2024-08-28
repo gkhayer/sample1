@@ -8,31 +8,37 @@ const cells = [
     title: "Branding",
     color: "border-[#809bce]",
     bg: "bg-[#809bce]",
+    radius: "rounded-tl-2xl",
   },
   {
     title: "Digital Marketing",
     color: "border-[#e27396]",
     bg: "bg-[#e27396]",
+    radius: "rounded-tr-2xl",
   },
   {
     title: "Business Development",
     color: "border-[#ffc2d1]",
     bg: "bg-[#ffc2d1]",
+    radius: "rounded-none",
   },
   {
     title: "Social Media Marketing",
     color: "border-[#95b8d2]",
     bg: "bg-[#95b8d2]",
+    radius: "rounded-none",
   },
   {
     title: "SEO Services",
     color: "border-[#b3d7e7]",
     bg: "bg-[#b3d7e7]",
+    radius: "rounded-bl-2xl",
   },
   {
     title: "Marketing Plan",
     color: "border-[#eac4d5]",
-    bg: "bg-[#eac4d5]", 
+    bg: "bg-[#eac4d5]",
+    radius: "rounded-br-2xl",
   },
 ];
 
@@ -40,22 +46,17 @@ const Home = () => {
   return (
     <>
       <div className="box grid grid-cols-2">
-        {/* <img
-          className="coverPhoto rounded-l-lg"
-          src={cover}
-          alt="Cover Image"
-        /> */}
-
-{/* border: 1px solid grey;
-    border-radius: 1rem;
-    background-color: white;
-    opacity: 0.9; */}
-        <div className="b"></div>
-        <div className="grid grid-cols-2 b rounded-r-lg">
+        <div className="coverFirstHalf borderRadius">
+          <p className="p-6">
+            Let's create your digital business card and make your first
+            impression unforgettable!
+          </p>
+        </div>
+        <div className="grid grid-cols-2 b borderRadius">
           {cells.map((cell, key) => (
             <div
               key={key}
-              className={`${cell.color} ${boxes} ${cell.bg}`}
+              className={`${cell.color} ${boxes} ${cell.bg} ${cell.radius}`}
             >
               {cell.title}
             </div>
