@@ -1,6 +1,5 @@
 import "../style/Home.css";
 import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
-import cover from '../assets/yelowtechbg.png'
 
 const boxes = "flex items-center justify-center";
 
@@ -74,7 +73,7 @@ const Home = () => {
         your online success with comprehensive SEO solutions.
       </p>
 
-      <hr className="h-px my-[5rem] border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-[5rem] border-0 dark:bg-gray-700" />
       <SelectPackageTypeInfo />
     </>
   );
