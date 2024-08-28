@@ -15,7 +15,7 @@
 }
 
 .coverFirstHalf {
-  background-color: var(--aliceBlue);
+  background-color: var(--skyBlue);
   opacity: 0.6;
   display: flex;
   align-items: center;
@@ -23,3 +23,10 @@
   flex-wrap: nowrap;
   justify-content: center;
 }
+
+.businessCard {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+/* 65 */

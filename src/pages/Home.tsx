@@ -45,15 +45,15 @@ const cells = [
 const Home = () => {
   return (
     <>
-      <div className="box grid grid-cols-2 h-screen/2 md:h-screen lg:h-screen" >
-        <div className="coverFirstHalf borderRadius">
+      <div className="box grid grid-cols-2 h-1/4 md:h-screen/2 lg:h-[65vh]" >
+        <div className="coverFirstHalf borderRadius businessCard">
           <p className="p-20">
             Let's create your digital business card and make your first
             impression unforgettable!
           </p>
           <p>🌸</p>
         </div>
-        <div className="grid grid-cols-2 b borderRadius">
+        <div className="grid grid-cols-2 b borderRadius businessCard">
           {cells.map((cell, key) => (
             <div
               key={key}
