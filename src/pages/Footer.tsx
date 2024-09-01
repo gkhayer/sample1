@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <hr className="mt-[45rem] h-px my-8 border-0 dark:bg-gray-700"></hr>
+      <hr className="mt-[15rem] h-px my-8 border-0 dark:bg-gray-700"></hr>
 
       <footer>
         <p>&copy; 2024 Shonq Technologies</p>
