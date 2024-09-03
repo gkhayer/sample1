@@ -6,7 +6,7 @@ type StateHookResult<T> = [
 ];
 
 const useFetch = (url: string) => {
-  const [data, setData] = useState(null);
+  const [data, setData] : any[] = useState(null);
   const [isError, setError]: StateHookResult<null> = useState(null);
   const [isPending, setisPending] = useState(false);
 
@@ -21,8 +21,8 @@ const useFetch = (url: string) => {
 
         return res.json();
       })
-      .then((data) => {
-        setData(data);
+      .then((res) => {
+        setData(res);
         setisPending(false);
         setError(null);
       })

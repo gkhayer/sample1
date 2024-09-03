@@ -1,110 +1,46 @@
+import { useState } from "react";
 
-import { useEffect, useRef, useState } from "react";
+interface MyComponentProps {
+  content: React.ReactNode; // Accepts JSX elements, strings, arrays, etc.
+  itemCount: number;
+}
 
-type dataType = {
-  url: "string";
-};
+const Carousal: React.FC<MyComponentProps> = ({ content, itemCount }) => {
+  const [currentImage, setCurrentImage] = useState(0);
 
-// add person to carousal
-const Carousal = () => {
-  const url = "https://jsonplaceholder.typicode.com/photos";
-  const carousalRef = useRef<HTMLInputElement>(null);
-  const { data, isPending,  error } = useFetchItem(url);
+  const handlePrev = () => {
+    setCurrentImage(currentImage < 1 ? currentImage : currentImage - 1);
+  };
 
-  if (data == null) {
-    return;
-  }
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // const handlePrev = () => {
-  //   carousalRef &&
-  //     carousalRef.current &&
-  //     carousalRef.current.scrollTo({
-  //       behavior: "smooth",
-  //       left: carousalRef.current.scrollLeft - carousalRef.current.clientWidth,
-  //     });
-  // };
-
-  // const handleNext = () => {
-  //   carousalRef &&
-  //     carousalRef.current &&
-  //     carousalRef.current.scrollTo({
-  //       behavior: "smooth",
-  //       left:
-  //         carousalRef &&
-  //         carousalRef.current &&
-  //         carousalRef.current.scrollLeft + carousalRef.current.clientWidth,
-  //     });
-  // };
-
-  const newWidth =
-    carousalRef && carousalRef.current && carousalRef.current.children.length;
-
-  useEffect(() => {
-    const autoplay = setInterval(() => {
-      if (newWidth != null) {
-        setCurrentIndex((currentIndex + 1) );
-      }
-
-
-    }, 1000);
-
-    return clearInterval(autoplay);
-  }, [currentIndex]);
+  const handleNext = () => {
+    setCurrentImage(
+      currentImage < itemCount - 1 ? currentImage + 1 : currentImage
+    );
+  };
 
   return (
     <div>
-      <div className="flex items-center">
-        {error && <p>Error: {error}</p>}
-        {isPending && <p>...Loading</p>}
-        {/* <button onClick={handlePrev} className="mx-2" type="button"></button> */}
-
-        <div style={{ display: "flex", overflow: "hidden" }} ref={carousalRef}>
-          {data &&
-            data.splice(0, 10).map((item: dataType) => (
-              <img
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  position: "absolute",
-                }}
-                src={item.url}
-              />
-            ))}
+      <div className="flex flex-row flex-nowrap justify-between items-center">
+        <button onClick={handlePrev} type="button">
+          Prev
+        </button>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            overflow: "hidden",
+            position: "relative",
+            padding: ".5rem",
+          }}
+        >
+          {content}
         </div>
-        {/* <button onClick={handleNext} className="mx-2" type="button"></button> */}
+        <button onClick={handleNext} type="button">
+          Next
+        </button>
       </div>
     </div>
   );
 };
 
 export default Carousal;
-
-const useFetchItem = (url: string) => {
-  const [isPending, setIsPending] = useState(false);
-  const [error, setError] = useState(null);
-  const [data, setData] = useState<[]>([]);
-
-  useEffect(() => {
-    fetch(url, {
-      method: "GET",
-    })
-      .then((res) => {
-        if (!res.ok) {
-          return new Error("Fetching unsuccessful");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setIsPending(false);
-        setError(null);
-        setData(data);
-      })
-      .catch((err) => {
-        setIsPending(false);
-        setError(err.message);
-      });
-  }, [url]);
-
-  return { data, isPending, error };
-};

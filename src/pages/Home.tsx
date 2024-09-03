@@ -1,5 +1,6 @@
 import "../style/Home.css";
 import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
+import PublicPromotion from "./publicPromotion/publicPromotion";
 
 const boxes = "flex items-center justify-center";
 
@@ -45,7 +46,7 @@ const cells = [
 const Home = () => {
   return (
     <>
-      <div className="box grid grid-cols-2 h-1/4 md:h-screen/2 lg:h-[65vh]" >
+      <section className="box grid grid-cols-2 h-1/4 md:h-screen/2 lg:h-[65vh]">
         <div className="coverFirstHalf borderRadius businessCard">
           <p className="p-20">
             Let's create your digital business card and make your first
@@ -63,20 +64,26 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <p className="py-6 m-6 text-lg">
-        At Shonq Tech, we specialize in crafting dynamic websites tailored to
-        your needs. From sleek portfolios to robust e-commerce platforms, our
-        team ensures your online presence reflects your brand's essence. Beyond
-        design, we're adept at managing your marketing strategies and optimizing
-        your site for search engines, guaranteeing maximum visibility in the
-        digital realm. Trust us to not only build your website but also elevate
-        your online success with comprehensive SEO solutions.
-      </p>
-      <hr className="h-px my-[5rem] border-0 dark:bg-gray-700" />
+      <section className="home-content">
+        <p className="py-6 m-6 text-lg">
+          At Shonq Tech, we specialize in crafting dynamic websites tailored to
+          your needs. From sleek portfolios to robust e-commerce platforms, our
+          team ensures your online presence reflects your brand's essence.
+          Beyond design, we're adept at managing your marketing strategies and
+          optimizing your site for search engines, guaranteeing maximum
+          visibility in the digital realm. Trust us to not only build your
+          website but also elevate your online success with comprehensive SEO
+          solutions.
+        </p>
+        <hr className="h-px my-[5rem] border-0 dark:bg-gray-700" />
 
-      <SelectPackageTypeInfo />
+        <SelectPackageTypeInfo />
+        <hr className="h-px my-[5rem] border-0 dark:bg-gray-700" />
+
+        <PublicPromotion />
+      </section>
     </>
   );
 };

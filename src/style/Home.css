@@ -28,3 +28,48 @@
   box-shadow: inset -5px 0 20px rgba(0, 0, 0, 0.5); /* Inner shadow to simulate book depth */
   transition: transform 0.2s;
 }
+
+.book {
+  width: 500px;
+  height: 300px;
+  perspective: 1000px; /* Gives a 3D perspective */
+  margin: 50px auto;
+  position: relative;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for the page */
+  transition: transform 0.5s ease;
+}
+
+/* Add this effect when hovering to flip the page */
+.page:hover {
+  transform: rotateY(-30deg);
+}
+
+.book-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Light shadow background */
+  box-shadow: inset -5px 0 20px rgba(0, 0, 0, 0.5); /* Inner shadow to simulate book depth */
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0));
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Visual shadow effect */
+}
