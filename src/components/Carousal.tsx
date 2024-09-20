@@ -1,42 +1,85 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "../style/Carousal.css";
+import React from "react";
 
-interface MyComponentProps {
-  content: React.ReactNode; // Accepts JSX elements, strings, arrays, etc.
-  itemCount: number;
+interface CarouselProps {
+  reactChildren: React.ReactNode;
+  autoPlay: boolean;
+  interval: number;
+  itemCount: number
 }
 
-const Carousal: React.FC<MyComponentProps> = ({ content, itemCount }) => {
-  const [currentImage, setCurrentImage] = useState(0);
+const Carousal: React.FC<CarouselProps> = ({
+  reactChildren,
+  autoPlay = false,
+  itemCount
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentImage(currentImage < 1 ? currentImage : currentImage - 1);
+  useEffect(() => {
+    if (autoPlay) {
+      const interval = setInterval(nextSlide, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [autoPlay]);
+
+  const nextSlide = () => {
+    if (autoPlay) {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
+    } else {
+      if (currentIndex < itemCount - 3) {
+        setCurrentIndex(currentIndex + 1);
+      }
+    }
   };
 
-  const handleNext = () => {
-    setCurrentImage(
-      currentImage < itemCount - 1 ? currentImage + 1 : currentImage
-    );
+  const prevSlide = () => {
+    if (autoPlay) {
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + itemCount) % itemCount
+      );
+    } else {
+      if (currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1);
+      }
+    }
   };
 
   return (
-    <div>
-      <div className="flex flex-row flex-nowrap justify-between items-center">
-        <button onClick={handlePrev} type="button">
-          Prev
-        </button>
+    <div className="carousel-container">
+      <div className="carousel-images-wrapper">
         <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            overflow: "hidden",
-            position: "relative",
-            padding: ".5rem",
-          }}
+          className="carousel-images"
+          style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
         >
-          {content}
+
+          {
+            reactChildren
+          }
+          {/* {reactChildren.map((child, index) => (
+            <div className="carousel-item" key={index}>
+              {child}
+            </div>
+          ))} */}
+          {/* {children.slice(0, 8).map((image, index) => (
+            <div className="carousel-item" key={index}>
+              <img src={image} alt={`Slide ${index}`} />
+              <p className="textDesc">Some title</p>
+            </div>
+          ))} */}
         </div>
-        <button onClick={handleNext} type="button">
-          Next
+      </div>
+      <div>
+        <button
+          className="carousel-control prev"
+          onClick={prevSlide}
+          disabled={currentIndex === 0}
+        >
+          ◀
+        </button>
+        <button className="carousel-control next" onClick={nextSlide}>
+          ▶
         </button>
       </div>
     </div>
