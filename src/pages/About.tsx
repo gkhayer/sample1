@@ -2,7 +2,7 @@ import "../style/About.css";
 import "../../tailwind.config";
 import Card from "../components/Card";
 
-const heading = `my-4 text-xl font-bold text-[var(--alpha)] dark:text-white md:text-4xl lg:text-4xl p-10`;
+const heading = `my-4 text-xl font-bold text-[var(--alpha)] md:text-4xl lg:text-4xl p-10`;
 
 type Subheading = {
   title: string;
@@ -130,7 +130,7 @@ const About = () => {
       <div>
         {aboutUsData.map((section, index) => (
           <div key={index}>
-            <h2 className={heading}>{section.heading}</h2>
+            <h6 className={heading}>{section.heading}</h6>
             <p>{section.description}</p>
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {section.subheading &&
