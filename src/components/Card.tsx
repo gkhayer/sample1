@@ -3,7 +3,7 @@ import "../style/Card.css";
 interface CardProps {
   title: string;
   description: string;
-  imageUrl?: string[];
+  imageUrl?: string;
   indiCardStyle?: {};
 }
 

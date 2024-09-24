@@ -54,7 +54,7 @@ const lessData = data.slice(0,20)
           reactChildren={lessData
             .map(
               (
-                childNode: { url: string[] | undefined; title: string },
+                childNode: { url: string | undefined; title: string },
                 idx: any
               ) => (
                 <Card

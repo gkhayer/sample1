@@ -1,6 +1,6 @@
 import "../style/Home.css";
 import SelectPackageTypeInfo from "./HomeComponents/SelectPackageTypeInfo";
-import PublicPromotion from "./publicPromotion/publicPromotion";
+import PublicPromotion from "./publicPromotion/PublicPromotion";
 
 const boxes = "flex items-center justify-center";
 
