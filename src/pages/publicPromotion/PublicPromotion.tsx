@@ -4,6 +4,7 @@ import Card from "../../components/Card";
 
 const style = {
   border: ".2rem solid",
+  width: '350px'
 };
 
 const PublicPromotion = () => {
