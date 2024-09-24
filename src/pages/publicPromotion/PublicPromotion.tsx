@@ -14,7 +14,7 @@ const PublicPromotion = () => {
     return;
   }
   
-const lessData = data.slice(0,10)
+const lessData = data.slice(0,20)
 
   return (
     <div>
@@ -66,7 +66,7 @@ const lessData = data.slice(0,10)
                 />
               )
             )}
-          autoPlay={false}
+          autoPlay={true}
           interval={3000}
           itemCount={lessData.length - 1}
         ></Carousal>
