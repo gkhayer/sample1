@@ -13,6 +13,8 @@ const PublicPromotion = () => {
   if (data == null) {
     return;
   }
+  
+const lessData = data.slice(0,10)
 
   return (
     <div>
@@ -49,8 +51,7 @@ const PublicPromotion = () => {
         {isError && <p>Error: {isError}</p>}
         {isPending && <p>Loading...</p>}
         <Carousal
-          reactChildren={data
-            .slice(0, 20)
+          reactChildren={lessData
             .map(
               (
                 childNode: { url: string[] | undefined; title: string },
@@ -59,15 +60,15 @@ const PublicPromotion = () => {
                 <Card
                   imageUrl={childNode.url}
                   title={childNode.title}
-                  description={"testting"}
+                  description={childNode.title}
                   key={idx}
                   indiCardStyle={style}
                 />
               )
             )}
           autoPlay={false}
-          interval={0}
-          itemCount={20}
+          interval={3000}
+          itemCount={lessData.length - 1}
         ></Carousal>
       </section>
     </div>
@@ -76,14 +77,4 @@ const PublicPromotion = () => {
 
 export default PublicPromotion;
 
-interface ImagesUrlType {
-  url: string;
-}
 
-export const getImagesUrl = (data: ImagesUrlType[]): string[] => {
-  return data.map((obj) => obj.url);
-};
-
-export const breakdown = (data: any[]): string[] => {
-  return data.map((obj) => obj);
-};
